@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>柯基公厕购买配额</title>
+    <link rel="stylesheet" type="text/css" href="CSS/buy.css">
+    <link rel="icon" type="image/x-icon" href="Icon/icon.ico" />
+
+</head>
+<body>
+<div class="full-screen-div"></div>
+<h1>柯基公厕购买配额</h1>
+<p class="p2">RMB/壹吨</p>
+<p class="p1" id="yuanDisplay">...</p>
+<label for="i1"></label><input type="number" id="i1" class="i1" placeholder=" 吨数" oninput="getNumberInput()">
+<button class="b1" id="buyButton" onclick="buy()">购买</button>
+<div class="d1"></div>
+<div class="d2"></div>
+<img src="Buy/IMG/yuan.jpg" alt="人民币" class="img1">
+<b class="p3" id="p3">300</b>
+
+<div class="d3"></div>
+<div class="d4"></div>
+<img class="img2" src="Buy/IMG/shi.png" alt="屎">
+<b class="p4" id="p4">100</b>
+
+<label for="i2"></label><input type="number" id="i2" class="i2" placeholder=" 吨数" oninput="getNumberInput1()">
+<button class="b2" id="maiButton" onclick="mai()">卖出</button>
+<a href="index.html" class="a1">实时价格</a>
+<a href="save.html" class="a2">恢复存档</a>
+</body>
+<script src="Buy/JS/buy.js"></script>
+</html>

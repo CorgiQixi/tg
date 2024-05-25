@@ -1,0 +1,58 @@
+@font-face {
+    font-family: 'HongLei';
+    src: url('../Fonts/HongLeiXingShuJianTi.ttf') format('truetype');
+}
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+.full-screen-div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    background-image: linear-gradient(120deg, #e0c3fc 0%, #8ec5fc 100%);
+}
+h1 {
+    font-family: 'HongLei', serif;
+    font-size: 70px;
+    text-align: center;
+}
+.i1 {
+    font-family: 'HongLei', serif;
+    font-size: 60px;
+    height: 95px;
+    width: 500px;
+    position: absolute;
+    top: 300px;
+    left: 450px;
+}
+.b1 {
+    font-family: 'HongLei', serif;
+    font-size: 60px;
+    height: 100px;
+    width: 200px;
+    position: absolute;
+    top: 300px;
+    left: 950px;
+}
+.a1 {
+    position: absolute;
+    border-radius: 200px;
+    background-image: linear-gradient(-20deg, #e9defa 0%, #fbfcdb 100%);
+    height: 100px;
+    width: 200px;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 30px;
+    text-decoration: none;
+    color: #3f5270;
+    top: 600px;
+    left: 43%
+}

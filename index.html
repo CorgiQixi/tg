@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <title>柯基公厕实时拉屎价格</title>
+    <link rel="stylesheet" type="text/css" href="CSS/style.css">
+    <link rel="icon" type="image/x-icon" href="Icon/icon.ico" />
+    <script>
+        function generateRandomYuan() {
+             window.yuan = Math.floor(Math.random() * 20) + 1;// 生成1到100之间的随机数
+            document.getElementById('display').innerText =  yuan + '0'// 将随机数显示在页面上
+
+        }
+
+    </script>
+    <script>
+        function generateRandomNumbers() {
+            var numbers = [];
+            var remaining = 100; // 初始剩余值为100
+
+            for (var i = 0; i < 2; i++) {
+                var randomNumber = Math.floor(Math.random() * remaining); // 生成0到remaining-1之间的随机数
+                numbers.push(randomNumber + 1); // 将随机数+1，确保是正整数
+                remaining -= randomNumber + 1; // 更新剩余值
+            }
+
+            numbers.push(remaining); // 第三个数是剩余值，确保和为100
+
+            while (true) {
+                if (numbers[0]!==100 && numbers[1]!==100 && numbers[2]!==100) {
+                    document.getElementById('p5').innerText = '处理费  ' + numbers[0] + '%';
+                    document.getElementById('p6').innerText = '掩埋费  ' + numbers[1] + '%';
+                    document.getElementById('p7').innerText = '利润  ' + numbers[2] + '%';
+                    break
+                }
+                else {
+                    //pass
+                }
+            }
+
+        }
+
+
+    </script>
+    <script>
+        function chen() {
+            var yhyuan =(yuan*10)-((yuan*10)*(num/10))
+            document.getElementById('p10').innerText = Math.round(yhyuan) + '元'
+        }
+    </script>
+    <script>
+        function p9Random() {
+            while (true) {
+                window.num = Math.floor(Math.random() * 10) + 1;
+                if (num!==10) {
+                    document.getElementById('p9').innerText = num + '0%'
+                    break
+                }
+                else {
+                    //pass,continue
+                }
+            }
+
+
+        }
+    </script>
+    <script>
+        function disableScroll() {
+            let x = window.scrollX;
+            let y = window.scrollY;
+            document.body.style.overflow = 'hidden';
+            window.onscroll = () => {
+                window.scrollTo(x, y);
+            };
+        }
+    </script>
+    <script>
+        window.onload = function() {
+            function initializePage() {
+                generateRandomYuan();
+                generateRandomNumbers();
+                p9Random();
+                chen();
+                disableScroll();
+            }
+
+            // 初始页面加载时执行
+            initializePage();
+
+            // 如果需要定期执行某些操作，可以使用 setInterval 或 setTimeout
+            // 例如，每 2 秒执行一次 initializePage 函数
+            setInterval(initializePage, 2000);
+
+        }
+    </script>
+</head>
+<body>
+<h1>柯基公厕实时拉屎价格</h1>
+<p class="p1">1</p>
+<p class="p2">吨屎：</p>
+<p id="display" class="p3"></p>
+<p class="p4">人民币/壹吨</p>
+<div class="d1"></div>
+<p class="p5" id="p5"></p>
+<div class="d2"></div>
+<p class="p6" id="p6"></p>
+<div class="d3"></div>
+<p class="p7" id="p7"></p>
+<b class="p8">七喜会员立减</b>
+<b class="p9" id="p9"></b>
+<p class="p10" id="p10"></p>
+<div class="full-screen-div"></div>
+<a href="buy.html" class="a1">购买配额</a>
+</body>
+</html>
